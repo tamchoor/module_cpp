@@ -1,16 +1,16 @@
-                                        # module_cpp
+                               # module_cpp
 This first module of C++
 
-                                        #General rules
+                               #General rules
 
-                                           Compiling
+                                Compiling
 
 • Compile your code with c++ and the flags -Wall -Wextra -Werror
 
 • Your code should still compile if you add the flag -std=c++98
 
 
-                                  Formatting and naming conventions
+                        Formatting and naming conventions
 
 
 • The exercise directories will be named this way: ex00, ex01, ..., exn
@@ -26,7 +26,7 @@ the guidelines.
 
 
 
-                                       Allowed/Forbidden
+                              Allowed/Forbidden
 
 
 You are not coding in C anymore. Time to C++! Therefore:
@@ -40,7 +40,7 @@ Note that unless explicitly stated otherwise, the using namespace <ns_name> and 
 • You are allowed to use the STL in Module 08 only. That means: no Containers (vector/list/map/and so forth) and no Algorithms (anything that requires to include the <algorithm> header) until then. Otherwise, your grade will be -42.
   
   
-                                  A few design requirements
+                            A few design requirements
   
   
 • Memory leakage occurs in C++ too. When you allocate memory (by using the new keyword), you must avoid memory leaks.
@@ -48,7 +48,7 @@ Note that unless explicitly stated otherwise, the using namespace <ns_name> and 
 • Any function implementation put in a header file (except for function templates) means 0 to the exercise.
 • You should be able to use each of your headers independently from others. Thus, they must include all the dependencies they need. However, you must avoid the problem of double inclusion by adding include guards. Otherwise, your grade will be 0.
   
-                                            #Read me
+                                  #Read me
 
 • You can add some additional files if you need to (i.e., to split your code). As these assignments are not verified by a program, feel free to do so as long as you turn in the mandatory files.
   
