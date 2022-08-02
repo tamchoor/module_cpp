@@ -43,7 +43,7 @@ Create a class in Orthodox Canonical Form that represents a fixed-point number:
 
 ◦ A member function void setRawBits( int const raw ); that sets the raw value of the fixed-point number.
 
-![] !!!!!!!!!!!!!!!!
+![Image text](https://github.com/tamchoor/module_cpp/blob/main/02/01.00.png)
 
         Exercise 01: Towards a more useful fixed-point number class
 
@@ -77,6 +77,8 @@ And add the following function to the Fixed class files:
 
 • An overload of the insertion («) operator that inserts a floating-point representation
 of the fixed-point number into the output stream object passed as parameter.
+  
+![Image text](https://github.com/tamchoor/module_cpp/blob/main/02/01.01.png)
 
                 Exercise 02 Now we’re talking
 
@@ -103,6 +105,8 @@ Add these four public overloaded member functions to your class:
 • A static member function max that takes as parameters two references on fixed-point numbers, and returns a reference to the greatest one.
 
 • A static member function max that takes as parameters two references to constant fixed-point numbers, and returns a reference to the greatest one.
+  
+![Image text](https://github.com/tamchoor/module_cpp/blob/main/02/01.02.png)
 
                     Exercise 03  BSP
 
