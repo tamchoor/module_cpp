@@ -13,5 +13,5 @@ Turn-in directory : ex00/
 Forbidden functions : None
 
 Just to make sure that everybody is awake, write a program that behaves as follows:
- 
+![Image text](https://github.com/tamchoor/module_cpp/blob/main/00/00.png)
 
