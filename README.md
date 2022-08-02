@@ -3,11 +3,11 @@ This first module of C++
 
 General rules
 Compiling
+
 • Compile your code with c++ and the flags -Wall -Wextra -Werror
 • Your code should still compile if you add the flag -std=c++98
 Formatting and naming conventions
-• The exercise directories will be named this way: ex00, ex01, ...
-, exn
+• The exercise directories will be named this way: ex00, ex01, ..., exn
 • Name your files, classes, functions, member functions and attributes as required in
 the guidelines.
 • Write class names in UpperCamelCase format. Files containing class code will always be named according to the class name. For instance: ClassName.hpp/ClassName.h, ClassName.cpp, or ClassName.tpp. Then, if you have a header file containing the definition of a class "BrickWall" standing for a brick wall, its name will be BrickWall.hpp.
