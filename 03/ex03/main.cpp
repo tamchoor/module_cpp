@@ -27,6 +27,7 @@ int main( void )
 	else
 		Boo.attack("Woo");
 
+	Boo.ShowHits();
 	Doo.ShowHits();
 	return 0; 
 }

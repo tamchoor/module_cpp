@@ -18,9 +18,12 @@ Cat::Cat(const Cat  & ref_Cat)
 
 Cat & Cat::operator=(const Cat & ref_Cat)
 {
+	if (this->brain == ref_Cat.brain)
+		return *this;
 	std::cout << "Cat assignement operator\n";
 	this->type = ref_Cat.type;
-	this->brain = ref_Cat.brain;
+	delete this->brain;
+	this->brain = new Brain(*(ref_Cat.brain));
 	return *this;
 }
 

@@ -104,8 +104,3 @@ bool ClapTrap::checkAbilityToAct(void)
 		return true;
 	return false;
 }
-
-
-
-
-

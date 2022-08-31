@@ -10,6 +10,10 @@ Point::~Point(void)
 	return ;
 }
 
+Point::Point(float const	_x, float const	_y) : x(_x), y(_y)
+{
+}
+
 Point::Point(Fixed const	&_x, Fixed const	&_y) : x(_x), y(_y)
 {
 	return ;
@@ -23,11 +27,11 @@ Point::Point(Point const & ref_Point): x(ref_Point.x), y(ref_Point.y)
 
 Point & Point::operator=(Point const & ref_Point)
 {
-	// std::cout << "Copy assignment operator called point" << std::endl;
 	if (this == & ref_Point)
 		return *this;
-	(Fixed) this->x = (Fixed)ref_Point.x;
-	(Fixed) this->y = (Fixed)ref_Point.y;
+	
+	std::cout << "Copy assignment operator called point cant change  " << std::endl;
+
 	return *this;
 }
 
@@ -47,4 +51,3 @@ Fixed const &Point::get_y() const
 {
 	return this->y;
 }
-

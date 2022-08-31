@@ -39,17 +39,6 @@ bool bsp(Point const a, Point const b, Point const c, Point const point)
 	float second_nbr;
 	float third_nbr;
 
-	// Point d;
-	// d =  a;
-	// Point s(a);
-
-	// std::cout << a.get_x().toFloat() << "= a x \n";
-	// std::cout << a.get_y().toFloat() << "= a y \n";
-	// std::cout << d.get_x().toFloat() << "= d x \n";
-	// std::cout << d.get_y().toFloat() << "= d y \n";
-	// std::cout << s.get_x().toFloat() << "= s x \n";
-	// std::cout << s.get_y().toFloat() << "= s y \n";
-
 	first_nbr = calculete_side_from_line(a, b, point);
 	second_nbr = calculete_side_from_line(b, c, point);
 	third_nbr = calculete_side_from_line(c, a, point);

@@ -48,5 +48,4 @@ class Fixed{
 
 std::ostream	& operator<<(std::ostream &out, Fixed const &ref_Fixed);
 
-
 #endif

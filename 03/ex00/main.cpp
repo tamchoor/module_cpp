@@ -58,7 +58,6 @@ int main( void )
 	}
 	else
 		Qoo.attack("Woo");
-
 	return 0; 
 }
 

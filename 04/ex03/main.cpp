@@ -6,26 +6,32 @@
 int main(void)
 {
 	IMateriaSource* src = new MateriaSource();
+	
 	src->learnMateria(new Ice());
 	src->learnMateria(new Cure());
 
 	ICharacter* me = new Character("me");
-	AMateria* tmp;
-	tmp = src->createMateria("ice");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
-	tmp = src->createMateria("cure");
-	me->equip(tmp);
+	AMateria* tmp0;
+	tmp0 = src->createMateria("ice");
+	me->equip(tmp0);
+	AMateria* tmp1;
+	tmp1 = src->createMateria("cure");
+	me->equip(tmp1);
+	AMateria* tmp2;
+	tmp2 = src->createMateria("cure");
+	me->equip(tmp2);
+	AMateria* tmp3;
+	tmp3 = src->createMateria("cure");
+	me->equip(tmp3);
 
-	//leaks in unequipe
 	me->unequip(0);
+	delete tmp0;
+	AMateria* tmp;
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
 	me->unequip(3);
+	delete tmp3;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 

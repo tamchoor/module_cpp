@@ -1,5 +1,4 @@
 #include "Fixed.hpp"
-
 #include <iostream>
 
 int main( void ) 
@@ -13,11 +12,14 @@ int main( void )
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
-	std::cout << Fixed::max( a, b ) << std::endl;
+	
 
-
+	std::cout << "a = " << a << std::endl;
+	std::cout << "b = " << b << std::endl;
+	std::cout << " Fixed::max( a, b ) " << Fixed::max( a, b ) << std::endl;
+	std::cout << " Fixed::min( a, b ) " << Fixed::min( a, b ) << std::endl;
 	Fixed c(2.09f);
-
+	std::cout << "c = " << c << std::endl;
 	if (c == c)
 		std::cout << "c == c" << std::endl;
 	else 
@@ -36,7 +38,10 @@ int main( void )
 		std::cout << "c > b" << std::endl;
 	else 
 		std::cout << "c < b" << std::endl;
-	
+
+	std::cout << --a << std::endl;
+	std::cout << a-- << std::endl;
+	std::cout << c*b << std::endl;
+	std::cout << c/c << std::endl;
 	return 0; 
 }
-

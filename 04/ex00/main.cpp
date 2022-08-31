@@ -22,6 +22,11 @@ int	main( void )
 	const WrongAnimal *wrongcat = new WrongCat();
 	std::cout << wrongcat->getType() << std::endl;
 	wrongcat->makeSound();
+
+	const WrongCat *wrongcat2 = new WrongCat();
+	std::cout << wrongcat2->getType() << std::endl;
+	wrongcat2->makeSound();
+	delete wrongcat2;
 	delete wrongcat;
 	return 0;
 }

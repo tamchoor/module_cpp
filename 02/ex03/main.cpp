@@ -5,14 +5,15 @@ bool bsp( Point const a, Point const b, Point const c, Point const point);
 
 int main( void ) 
 {
-	Point a(Fixed(1), Fixed(4));
-	Point b(Fixed(10), Fixed(1));
-	Point c(Fixed(10), Fixed(10));
-	int a = 9;
+	// Point a(1.0f, 4.0f);
+	// Point b(10.0f, 1.0f);
+	// Point c(10.0f, 10.0f);
 
-	
+	Point a(1.0f, 4.0f);
+	Point b(1.0f, 1.0f);
+	Point c(2.0f, 2.0f);
 
-	Point point(Fixed(9), Fixed(3));
+	Point point(9.0f, 3.0f);
 
 	if (bsp(a, b, c, point) == true)
 	{
@@ -21,9 +22,7 @@ int main( void )
 	else 
 	{
 		std::cout << "point is NOT in the triangle" << std::endl;
-
 	}
-
 	return 0; 
 }
 

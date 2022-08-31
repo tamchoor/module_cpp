@@ -60,6 +60,8 @@ Fixed & Fixed::operator=(Fixed const & ref_Fixed)
 	return *this;
 }
 
+
+
 float	Fixed::toFloat(void) const
 {
 	return (float) this->val / (float) (1 << this->nbr_bits);
@@ -192,6 +194,3 @@ Fixed const & Fixed::max (Fixed const &one, Fixed const &two)
 		return (one);
 	return (two);
 }
-
-
-

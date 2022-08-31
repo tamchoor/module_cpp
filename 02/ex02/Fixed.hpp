@@ -36,10 +36,6 @@ class Fixed{
 		static Fixed const & min (Fixed const &one, Fixed const &two);
 		static Fixed & max (Fixed &one, Fixed &two);
 		static Fixed const & max (Fixed const &one, Fixed const &two);
-		
-		
-
-		
 		int getRawBits(void) const;
 		void setRawBits(int const raw);
 
@@ -49,6 +45,5 @@ class Fixed{
 };
 
 std::ostream	& operator<<(std::ostream &out, Fixed const &ref_Fixed);
-
 
 #endif

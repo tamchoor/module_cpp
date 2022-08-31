@@ -18,9 +18,12 @@ Dog::Dog(const Dog  & ref_Dog)
 
 Dog & Dog::operator=(const Dog & ref_Dog)
 {
+	if (this->brain == ref_Dog.brain)
+		return *this;
 	std::cout << "Dog assignement operator\n";
 	this->type = ref_Dog.type;
-	this->brain = ref_Dog.brain;
+	delete this->brain;
+	this->brain = new Brain(*(ref_Dog.brain));
 	return *this;
 }
 

@@ -32,25 +32,6 @@ FragTrap::~FragTrap(void)
 	return ;
 }
 
-void FragTrap::attack(const std::string& target)
-{
-	if (this->_hitPoints == 0)
-	{
-		std::cout << "FragTrap " << this->_name << " is not attack " << ", hit points = " << this->_hitPoints << " \n";
-		return ;
-	}
-	if (this->_energyPoints == 0)
-	{
-		std::cout << "FragTrap " << this->_name << " is not attack " << ", energy points = " << this->_energyPoints << " \n";
-		return ;
-	}
-	if (this->_energyPoints < 1)
-		this->_energyPoints = 0;
-	else
-		this->_energyPoints -= 1;
-	std::cout << "FragTrap " << this->_name << " attacks " << target << ", causing " << this->_attackDamage << " points of damage! \n";
-}
-
 void FragTrap::highFivesGuys(void)
 {
 	std::cout << "High five " << this->_name << std::endl;

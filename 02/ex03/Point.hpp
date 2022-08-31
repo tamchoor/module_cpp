@@ -6,6 +6,7 @@
 class Point{
 	public:
 		Point();
+		Point(float const	_x, float const	_y);
 		Point(Fixed const	&_x, Fixed const	&_y);
 		Point(Point const & ref_Point);
 		Point & operator=(Point const & ref_Point);
