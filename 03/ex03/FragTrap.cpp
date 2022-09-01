@@ -2,9 +2,9 @@
 
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	this->_hitPoints = 50;
-	this->_energyPoints = 50;
-	this->_attackDamage = 50;
+	this->_hitPoints = 20;
+	this->_energyPoints = 20;
+	this->_attackDamage = 20;
 	std::cout << "FragTrap " << this->_name << " constructed \n";
 	return;
 }

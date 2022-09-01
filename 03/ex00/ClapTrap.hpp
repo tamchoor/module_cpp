@@ -22,7 +22,6 @@ class ClapTrap
 		void		setAttackDamage(unsigned int damage);
 		unsigned int getAttackDamage(void);
 
-
 	private:
 		std::string		_name;
 		unsigned int	_hitPoints;
