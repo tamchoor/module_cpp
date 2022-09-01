@@ -19,13 +19,14 @@ int main( void )
 	Doo.guardGate();
 	Doo.whoAmI();
 	Doo.ShowHits();
-	if (Boo.ScavTrap::checkAbilityToAct())
+	Boo.ShowHits();
+	if (Doo.ScavTrap::checkAbilityToAct())
 	{
-		Boo.attack("Doo");
-		Doo.ScavTrap::takeDamage(Boo.ScavTrap::getAttackDamage());
+		Doo.attack("Boo");
+		Boo.ScavTrap::takeDamage(Doo.ScavTrap::getAttackDamage());
 	}
 	else
-		Boo.attack("Woo");
+		Doo.attack("Woo");
 
 	Boo.ShowHits();
 	Doo.ShowHits();

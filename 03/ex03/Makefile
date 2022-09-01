@@ -5,7 +5,7 @@ INCL = ClapTrap.hpp ScavTrap.hpp FragTrap.hpp DiamondTrap.hpp
 OBJ =  $(SRC:%.cpp=%.o)
 
 CC = c++
-C_FLAGS = -Wall -Wextra -Werror -Wshadow
+C_FLAGS = -Wall -Wextra -Werror -Wshadow -g
 #-Wno-shadow
 FLAGS = -std=c++98 $(C_FLAGS)
 

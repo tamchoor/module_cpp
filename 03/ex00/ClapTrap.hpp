@@ -6,6 +6,7 @@
 class ClapTrap
 {
 	public:
+		ClapTrap();
 		ClapTrap(std::string name);
 		ClapTrap(const ClapTrap & ref_ClapTrap);
 		ClapTrap & operator=(const ClapTrap & ref_ClapTrap);
@@ -21,7 +22,6 @@ class ClapTrap
 		unsigned int getHitPoint(void);
 		void		setAttackDamage(unsigned int damage);
 		unsigned int getAttackDamage(void);
-
 
 	private:
 		std::string		_name;

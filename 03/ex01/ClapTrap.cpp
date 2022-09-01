@@ -1,6 +1,14 @@
 #include "ClapTrap.hpp"
 
-ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(10), _energyPoints(10), _attackDamage(0)
+#define HIT_POINTS 10
+#define ENERGI_POINTS 10
+#define ATTACK_DAM 0
+
+ClapTrap::ClapTrap() : _name("noname"), _hitPoints(HIT_POINTS), _energyPoints(ENERGI_POINTS), _attackDamage(ATTACK_DAM)
+{
+};
+
+ClapTrap::ClapTrap(std::string name) : _name(name), _hitPoints(HIT_POINTS), _energyPoints(ENERGI_POINTS), _attackDamage(ATTACK_DAM)
 {
 	std::cout << "ClapTrap " << this->_name << " constructed \n";
 	return ;

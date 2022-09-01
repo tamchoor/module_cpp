@@ -1,16 +1,32 @@
 # include "FragTrap.hpp"
 
+#define HIT_POINTS 100
+#define ENERGI_POINTS 100
+#define ATTACK_DAM 30
+
+FragTrap::FragTrap() : ClapTrap()
+{
+	this->_hitPoints = HIT_POINTS;
+	this->_energyPoints = ENERGI_POINTS;
+	this->_attackDamage = ATTACK_DAM;
+	return;
+}
+
 FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	this->_hitPoints = 100;
-	this->_energyPoints = 100;
-	this->_attackDamage = 30;
+	this->_hitPoints = HIT_POINTS;
+	this->_energyPoints = ENERGI_POINTS;
+	this->_attackDamage = ATTACK_DAM;
 	std::cout << "FragTrap " << this->_name << " constructed \n";
 	return;
 }
 
 FragTrap::FragTrap(const FragTrap & ref_FragTrap) : ClapTrap(ref_FragTrap)
 {
+	this->_name = ref_FragTrap._name;
+	this->_hitPoints = ref_FragTrap._hitPoints;
+	this->_energyPoints = ref_FragTrap._energyPoints;
+	this->_attackDamage = ref_FragTrap._attackDamage;
 	std::cout << "FragTrap " << this->_name << " copy constructed \n";
 }
 
