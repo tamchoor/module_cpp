@@ -2,7 +2,7 @@
 
 Bureaucrat::Bureaucrat()
 {
-
+	return;
 }
 
 Bureaucrat::Bureaucrat(const std::string name,int grade) : _name(name)
@@ -21,13 +21,14 @@ Bureaucrat::Bureaucrat(const Bureaucrat & ref_Bureaucrat) : _name(ref_Bureaucrat
 
 Bureaucrat & Bureaucrat::operator=(const Bureaucrat & ref_Bureaucrat)
 {
-	_grade = ref_Bureaucrat._grade;
+	throw std::logic_error("Bureaucrat::HaveConstName - copy assignment imposible");
+	(void) &ref_Bureaucrat;
 	return *this;
 }
 
 Bureaucrat::~Bureaucrat()
 {
-
+	return;
 }
 
 std::string Bureaucrat::getName() const
@@ -74,7 +75,7 @@ void Bureaucrat::signForm(Form &ref_form)
 
 void Bureaucrat::executeForm(Form const &form)
 {
-	if  (_grade < form.getExecuteGrade() && form.getIsSigned() == 1)
+	if  (_grade <= form.getExecuteGrade() && form.getIsSigned() == 1)
 		std::cout << _name << " executed " << form.getName() << std::endl;
 	else
 	{

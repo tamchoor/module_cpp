@@ -13,6 +13,9 @@ class Dog : public Animal
 
 		~Dog(void);
 		void makeSound(void) const;
+		void printAddressBrain(void) const;
+		void printBrain(void) const;
+		void fillBrain(std::string idea);
 
 	private :
 		Brain	*brain;

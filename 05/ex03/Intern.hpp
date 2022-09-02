@@ -20,9 +20,11 @@ public:
 	Intern &operator=(const Intern &_target);
 
 	Form *makeForm(std::string _name, std::string _target);
-	Form *makeShrubberyForm(std::string _target);
-	Form *makeRobotomyForm(std::string _target);
-	Form *makePresidentialForm(std::string _target);
+	
+	private: 
+		Form *makeShrubberyForm(std::string _target);
+		Form *makeRobotomyForm(std::string _target);
+		Form *makePresidentialForm(std::string _target);
 };
 
 #endif

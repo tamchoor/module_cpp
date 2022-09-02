@@ -7,7 +7,6 @@ class Bureaucrat;
 class Form
 {
 	public:
-		Form();
 		Form(std::string name, std::string target, int requiredGrade, int executedGrade);
 		Form(const Form &ref_form);
 		Form &operator=(const Form &ref_form);
@@ -25,6 +24,7 @@ class Form
 		virtual void executeConcreteForm() = 0;
 
 	private:
+		Form();
 		std::string _name;
 		std::string _target;
 		bool _isSigned;

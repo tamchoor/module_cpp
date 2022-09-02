@@ -20,12 +20,6 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &ref_fo
 
 }
 
-// ShrubberyCreationForm &ShrubberyCreationForm::operator=(const ShrubberyCreationForm &ref_form)
-// {
-
-// 	return *this;
-// }
-
 void ShrubberyCreationForm::executeConcreteForm()
 {
 	std::string filename = getTarget().append("_shrubbery");

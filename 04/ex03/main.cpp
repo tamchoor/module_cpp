@@ -14,8 +14,9 @@ int main(void)
 	AMateria* tmp0;
 	tmp0 = src->createMateria("ice");
 	me->equip(tmp0);
+	me->unequip(3);
 	AMateria* tmp1;
-	tmp1 = src->createMateria("cure");
+	tmp1 = src->createMateria("ice");
 	me->equip(tmp1);
 	AMateria* tmp2;
 	tmp2 = src->createMateria("cure");
@@ -25,13 +26,11 @@ int main(void)
 	me->equip(tmp3);
 
 	me->unequip(0);
-	delete tmp0;
 	AMateria* tmp;
 	tmp = src->createMateria("cure");
 	me->equip(tmp);
 
 	me->unequip(3);
-	delete tmp3;
 	tmp = src->createMateria("ice");
 	me->equip(tmp);
 
@@ -39,6 +38,7 @@ int main(void)
 
 	me->use(0, *bob);
 	me->use(1, *bob);
+	me->use(2, *bob);
 	me->use(3, *bob);
 
 	delete bob;

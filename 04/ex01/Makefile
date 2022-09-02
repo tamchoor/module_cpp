@@ -5,7 +5,8 @@ INCL = Animal.hpp Dog.hpp Cat.hpp Brain.hpp
 OBJ =  $(SRC:%.cpp=%.o)
 
 CC = c++
-C_FLAGS = -Wall -Wextra -Werror
+C_FLAGS = -Wall -Wextra -Werror  -Wshadow 
+#  -fsanitize=address
 FLAGS = -std=c++98 $(C_FLAGS)
 
 GREEN = \033[0;32m

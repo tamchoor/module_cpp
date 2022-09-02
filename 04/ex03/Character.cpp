@@ -78,12 +78,12 @@ void	Character::equip(AMateria* m)
 		}
 		i++;
 	}
-
-	// inventory[i] = m;
 }
 
 void	Character::unequip(int idx)
 {
+	if (idx < SLOTS && inventory[idx])
+		delete inventory[idx];
 	if (idx < SLOTS)
 		inventory[idx] = NULL;
 }

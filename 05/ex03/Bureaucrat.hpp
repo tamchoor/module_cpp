@@ -12,7 +12,6 @@ class Form;
 class Bureaucrat
 {
 	public:
-		Bureaucrat();
 		Bureaucrat(const std::string name,int grade);
 		Bureaucrat(const Bureaucrat & ref_Bureaucrat);
 		Bureaucrat & operator=(const Bureaucrat & ref_Bureaucrat);
@@ -27,6 +26,7 @@ class Bureaucrat
 		void executeForm(Form const &ref_form);
 
 	private:
+		Bureaucrat();
 		const	std::string _name;
 		int		_grade;
 

@@ -37,3 +37,18 @@ void Dog::makeSound(void) const
 {
 	std::cout << "Woof\n";
 }
+
+void Dog::printAddressBrain(void) const
+{
+	std::cout << "Braint adress " << this->brain << std::endl;
+}
+
+void Dog::fillBrain(std::string idea)
+{
+	this->brain->fillBrain(idea);
+}
+
+void Dog::printBrain(void) const
+{
+	this->brain->printBrain();
+}

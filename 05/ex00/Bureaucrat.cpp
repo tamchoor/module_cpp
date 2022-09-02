@@ -2,15 +2,15 @@
 
 Bureaucrat::Bureaucrat()
 {
-
+	return;
 }
 
 Bureaucrat::Bureaucrat(const std::string name,int grade) : _name(name)
 {
 	if (grade < 1)
-		throw std::logic_error("Bureaucrat::GradeTooHighException"); // throw std::exception("Bureaucrat::GradeTooHighException");
+		throw std::logic_error("Bureaucrat::GradeTooHighException");
 	else if (grade > 150)
-		throw std::logic_error("Bureaucrat::GradeTooLowException"); // throw std::exception("Bureaucrat::GradeTooLowException");
+		throw std::logic_error("Bureaucrat::GradeTooLowException");
 	this->_grade = grade;
 }
 
@@ -21,7 +21,8 @@ Bureaucrat::Bureaucrat(const Bureaucrat & ref_Bureaucrat) : _name(ref_Bureaucrat
 
 Bureaucrat & Bureaucrat::operator=(const Bureaucrat & ref_Bureaucrat)
 {
-	_grade = ref_Bureaucrat._grade;
+	throw std::logic_error("Bureaucrat::HaveConstName - copy assignment imposible");
+	(void) &ref_Bureaucrat;
 	return (*this);
 }
 

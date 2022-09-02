@@ -5,6 +5,7 @@ int	main( void )
 	try 
 	{
 		Bureaucrat Qoo("Qoo", 1);
+		std::cout << Qoo ;
 	}
 	catch (std::exception & ex)
 	{
@@ -14,6 +15,7 @@ int	main( void )
 	try 
 	{
 		Bureaucrat Woo("Woo", -1);
+		std::cout << Woo;
 	}
 	catch (std::exception & ex)
 	{
@@ -23,6 +25,7 @@ int	main( void )
 	try 
 	{
 		Bureaucrat Roo("Roo", 151);
+		std::cout << Roo << std::endl;
 	}
 	catch (std::exception & ex)
 	{
@@ -36,6 +39,7 @@ int	main( void )
 		Doo.incrementGrade();
 		std::cout << Doo;
 		Doo.incrementGrade();
+		std::cout << Doo << std::endl;
 	}
 	catch (std::exception & ex)
 	{
@@ -49,6 +53,7 @@ int	main( void )
 		Doo.decrementGrade();
 		std::cout << Doo;
 		Doo.decrementGrade();
+		std::cout << Doo << std::endl;
 	}
 	catch (std::exception & ex)
 	{

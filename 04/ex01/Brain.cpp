@@ -32,3 +32,23 @@ Brain::~Brain(void)
 	std::cout << "Brain destructor\n";
 	return;
 }
+
+void Brain::fillBrain(std::string idea)
+{
+	int i = 0;
+	while (i < 100)
+	{
+		this->ideas[i] = idea;
+		i++;
+	}
+}
+
+void Brain::printBrain(void) const
+{
+	int i = 0;
+	while (i < 5)
+	{
+		std::cout << this->ideas[i] << std::endl; 
+		i++;
+	}
+}

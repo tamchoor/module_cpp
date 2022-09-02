@@ -2,36 +2,36 @@
 #include "Form.hpp"
 #include "ShrubberyCreationForm.hpp"
 #include "RobotomyRequestForm.hpp"
+#include "Intern.hpp"
 
 int	main( void )
 {
 	try
 	{
-		// ShrubberyCreationForm frst("beach");
-		// std::cout << frst;
+		std::string formNames[3] = {
+					"shrubbery creation",
+					"robotomy request",
+					"presidential pardon"};
+		Intern intern1;
 
-		// Bureaucrat Boo("Boo", 130);
-		// std::cout << Boo;
-		// frst.beSigned(Boo);
-		// std::cout << frst;
-		// frst.execute(Boo);
+		Form * frst = intern1.makeForm(formNames[0], "home");
+		Form * sec = intern1.makeForm(formNames[1], "table");
+		Form * thrd = intern1.makeForm(formNames[2], "Doo");
+		
+		std::cout << *frst;
+		std::cout << *sec;
+		std::cout << *thrd;
 
-		// ShrubberyCreationForm sec("  ");
-		// std::cout << sec;
-		// std::cout << &sec;
-		// std::cout << &frst;
-		// sec = frst;
-		// std::cout << sec;
-		// std::cout << &sec;
-
-		RobotomyRequestForm third("Dog");
-		std::cout << third;
 		Bureaucrat Boo("Boo", 130);
 		std::cout << Boo;
-		third.beSigned(Boo);
-		std::cout << third;
-		third.execute(Boo);
+		frst->beSigned(Boo);
+		Boo.signForm(*frst);
+		std::cout << *frst;
+		frst->execute(Boo);
+		Boo.executeForm(*frst);
 
+		Form * fourth = intern1.makeForm("formNames[2]", "Doo");
+		fourth->beSigned(Boo);
 	}
 	catch(const std::exception& ex)
 	{
