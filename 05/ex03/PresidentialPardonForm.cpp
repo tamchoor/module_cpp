@@ -22,8 +22,7 @@ PresidentialPardonForm::PresidentialPardonForm(const PresidentialPardonForm &ref
 
 }
 
-
-void PresidentialPardonForm::executeConcreteForm()
+void PresidentialPardonForm::executeConcreteForm()  const
 {
 	std::cout << getTarget() << " has been pardoned by Zaphod Beeblebrox." << std::endl;
 }

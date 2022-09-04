@@ -15,9 +15,7 @@ class ShrubberyCreationForm : public Form
 		~ShrubberyCreationForm();
 		ShrubberyCreationForm(const ShrubberyCreationForm &ref_form);
 		// ShrubberyCreationForm &operator=(const ShrubberyCreationForm &ref_form);
-		void executeConcreteForm();
-
-		
+		void executeConcreteForm() const;
 };
 
 #endif

@@ -20,7 +20,7 @@ RobotomyRequestForm::RobotomyRequestForm(const RobotomyRequestForm &ref_form) : 
 
 }
 
-void RobotomyRequestForm::executeConcreteForm()
+void RobotomyRequestForm::executeConcreteForm()  const
 {
 	std::random_device random_device; // Источник энтропии.
 	std::mt19937 generator(random_device()); // Генератор случайных чисел.

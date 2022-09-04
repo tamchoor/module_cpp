@@ -8,31 +8,29 @@ int	main( void )
 {
 	try
 	{
-		// ShrubberyCreationForm frst("beach1");
+		// ShrubberyCreationForm frst("beach");
 		// std::cout << frst;
-		// Bureaucrat Boo("Boo", 123);
+		// Bureaucrat Boo("Boo", 145);
 		// std::cout << Boo;
-		// frst.beSigned(Boo);
+		// Boo.signForm(frst);
 		// std::cout << frst;
-		// frst.execute(Boo);
+		// Boo.executeForm(frst);
 
 
-		PresidentialPardonForm second("Woo");
-		std::cout << second;
-		Bureaucrat Boo("Boo", 5);
-		second.beSigned(Boo);
-		Boo.signForm(second);
-		std::cout << second;
-		Boo.executeForm(second);
-		second.execute(Boo);
+		// PresidentialPardonForm second("Woo");
+		// std::cout << second;
+		// Bureaucrat Boo("Boo", 26);
+		// Boo.signForm(second);
+		// std::cout << second;
+		// Boo.executeForm(second);
 
-		// RobotomyRequestForm third("Dog");
-		// std::cout << third;
-		// Bureaucrat Boo("Boo", 13);
-		// std::cout << Boo;
-		// third.beSigned(Boo);
-		// std::cout << third;
-		// third.execute(Boo);
+		RobotomyRequestForm third("Dog");
+		std::cout << third;
+		Bureaucrat Boo("Boo", 77);
+		std::cout << Boo;
+		Boo.signForm(third);
+		std::cout << third;
+		Boo.executeForm(third);
 
 	}
 	catch(const std::exception& ex)

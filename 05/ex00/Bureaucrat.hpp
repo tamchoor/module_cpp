@@ -18,6 +18,14 @@ class Bureaucrat
 		unsigned getGrade() const;
 		void incrementGrade();
 		void decrementGrade();
+		class GradeTooHighException : public std::exception
+		{
+			virtual const char* what() const throw();
+		};
+		class GradeTooLowException: public std::exception 
+		{
+			virtual const char* what() const throw();
+		};
 
 	private:
 		Bureaucrat();

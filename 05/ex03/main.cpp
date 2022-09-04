@@ -24,14 +24,20 @@ int	main( void )
 
 		Bureaucrat Boo("Boo", 130);
 		std::cout << Boo;
-		frst->beSigned(Boo);
 		Boo.signForm(*frst);
 		std::cout << *frst;
-		frst->execute(Boo);
 		Boo.executeForm(*frst);
 
+		delete frst;
+		delete sec;
+		delete thrd;
+
 		Form * fourth = intern1.makeForm("formNames[2]", "Doo");
-		fourth->beSigned(Boo);
+		Boo.signForm(*fourth);
+
+		delete fourth;
+
+		
 	}
 	catch(const std::exception& ex)
 	{

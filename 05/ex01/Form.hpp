@@ -19,6 +19,15 @@ class Form
 		int getRequiredGrade() const;
 		int getExecuteGrade() const;
 
+		class GradeTooHighException: public std::exception 
+		{
+			virtual const char* what() const throw();
+		};
+		class GradeTooLowException: public std::exception 
+		{
+			virtual const char* what() const throw();
+		};
+
 	private:
 		Form();
 		const std::string _name;

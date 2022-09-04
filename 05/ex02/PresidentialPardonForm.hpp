@@ -18,7 +18,7 @@ class PresidentialPardonForm : public Form
 		~PresidentialPardonForm();
 		PresidentialPardonForm(const PresidentialPardonForm &ref_form);
 
-		void executeConcreteForm();
+		void executeConcreteForm() const;
 };
 
 #endif

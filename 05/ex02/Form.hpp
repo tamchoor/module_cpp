@@ -10,18 +10,25 @@ class Form
 		Form(std::string name, std::string target, int requiredGrade, int executedGrade);
 		Form(const Form &ref_form);
 		Form &operator=(const Form &ref_form);
-		~Form();
+		virtual ~Form();
 
 		void beSigned(Bureaucrat &ref_bureaucrat);
+		void execute(Bureaucrat const &executor) const;
+		virtual void executeConcreteForm() const = 0;
 
 		std::string getName() const;
 		std::string getTarget() const;
 		bool getIsSigned() const;
 		int getRequiredGrade() const;
 		int getExecuteGrade() const;
-
-		void execute(Bureaucrat const &executor);
-		virtual void executeConcreteForm() = 0;
+		class GradeTooHighException: public std::exception 
+		{
+			virtual const char* what() const throw();
+		};
+		class GradeTooLowException: public std::exception 
+		{
+			virtual const char* what() const throw();
+		};
 
 	private:
 		Form();

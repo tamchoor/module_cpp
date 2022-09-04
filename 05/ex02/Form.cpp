@@ -8,9 +8,9 @@ Form::Form() : _name(""), _target(""), _isSigned(0), _requiredGrade(0), _execute
 Form::Form(std::string name, std::string target, int requiredGrade, int executedGrade) : _name(name), _target(target), _isSigned(0), _requiredGrade(requiredGrade), _executedGrade(executedGrade)
 {
 	if (requiredGrade < 1 || executedGrade < 1)
-		throw std::logic_error("Form::GradeTooHighException");
+		throw Form::GradeTooHighException();
 	else if (requiredGrade > 150 || executedGrade < 1)
-		throw std::logic_error("Form::GradeTooLowException");
+		throw Form::GradeTooLowException();
 }
 
 Form::Form(const Form &ref_form) : _name(ref_form._name), _target(ref_form._target), _isSigned(ref_form._isSigned), _requiredGrade(ref_form._requiredGrade), _executedGrade(ref_form._executedGrade)
@@ -35,7 +35,7 @@ void Form::beSigned(Bureaucrat &ref_bureaucrat)
 	if (ref_bureaucrat.getGrade() <= this->_requiredGrade)
 		this->_isSigned = 1;
 	else 
-		throw std::logic_error("Form::GradeTooLowException in beSigned");
+		throw Form::GradeTooLowException();
 }
 
 std::string Form::getName() const
@@ -63,7 +63,7 @@ int Form::getExecuteGrade() const
 	return this->_executedGrade;
 }
 
-void Form::execute(Bureaucrat const &executor)
+void Form::execute(Bureaucrat const &executor) const
 {
 	if (this->getIsSigned() == 0)
 		throw std::logic_error("Form::isNotSigned");
@@ -80,5 +80,15 @@ std::ostream& operator<<(std::ostream &out, const Form &ref)
 	<< "\n Required grade : " << ref.getRequiredGrade() \
 	<< "\n Executed grade : " << ref.getExecuteGrade()  << std::endl;
 	return (out);
+}
+
+const char* Form::GradeTooHighException::what() const throw()
+{
+	return "Form: Grade too High";
+}
+
+const char* Form::GradeTooLowException::what() const throw()
+{
+	return "Form: Grade too Low";
 }
 

@@ -35,15 +35,11 @@ int	main( void )
 		Form secnd("second", 147, 12);
 		std::cout << secnd;
 
-		secnd.beSigned(Doo);
-		std::cout << secnd;
 		Doo.signForm(secnd);
 
-		frst.beSigned(Doo);
-		std::cout << frst;
 		Doo.signForm(frst);
-		
-
+		std::cout << frst;
+		std::cout << secnd;
 	}
 	catch (std::exception & ex)
 	{

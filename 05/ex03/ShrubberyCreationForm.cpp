@@ -20,7 +20,7 @@ ShrubberyCreationForm::ShrubberyCreationForm(const ShrubberyCreationForm &ref_fo
 
 }
 
-void ShrubberyCreationForm::executeConcreteForm()
+void ShrubberyCreationForm::executeConcreteForm()  const
 {
 	std::string filename = getTarget().append("_shrubbery");
 	std::ofstream outfd(filename);

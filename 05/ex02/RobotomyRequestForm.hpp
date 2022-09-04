@@ -17,7 +17,7 @@ class RobotomyRequestForm : public Form
 		~RobotomyRequestForm();
 		RobotomyRequestForm(const RobotomyRequestForm &ref_form);
 
-		void executeConcreteForm();
+		void executeConcreteForm() const;
 };
 
 #endif
