@@ -41,7 +41,7 @@ int	main( void )
 	}
 	catch(const std::exception& ex)
 	{
-		std::cerr << "frst " << ex.what() << std::endl;
+		std::cerr << ex.what() << std::endl;
 	}
 	return 0;
 }
