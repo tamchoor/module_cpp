@@ -1,5 +1,4 @@
 #include "Fixed.hpp"
-
 #include <iostream>
 
 int main( void )
@@ -13,7 +12,6 @@ int main( void )
 	std::cout << b.getRawBits() << std::endl;
 	std::cout << c.getRawBits() << std::endl;
 
-/*
 	std::cout << "d " << std::endl;
 	Fixed d;
 	d.setRawBits(1);
@@ -41,6 +39,5 @@ int main( void )
 	std::cout << "e " << e.getRawBits() << std::endl;
 	std::cout << "f " << f.getRawBits() << std::endl;
 	std::cout << "g " << g.getRawBits() << std::endl;
-*/
 	return 0; 
 }

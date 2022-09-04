@@ -23,6 +23,9 @@ DiamondTrap::DiamondTrap(std::string name) : ScavTrap(name),  FragTrap(name)
 	this->ScavTrap::_energyPoints = ENERGI_POINTS;
 	this->FragTrap::_attackDamage = ATTACK_DAM;
 	std::cout << "DiamondTrap " << this->_name << " constructed \n";
+	this->_hitPoints = FragTrap::_hitPoints;
+	this->_attackDamage = ScavTrap::_attackDamage;
+	this->_energyPoints = FragTrap::_energyPoints;
 	return;
 }
 

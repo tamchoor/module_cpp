@@ -60,8 +60,6 @@ Fixed & Fixed::operator=(Fixed const & ref_Fixed)
 	return *this;
 }
 
-
-
 float	Fixed::toFloat(void) const
 {
 	return (float) this->val / (float) (1 << this->nbr_bits);
@@ -77,7 +75,6 @@ std::ostream	& operator<<(std::ostream &out, Fixed const &ref_Fixed)
 	out << ref_Fixed.toFloat();
 	return (out);
 }
-
 
 bool Fixed::operator>(Fixed const & _Fixed) const
 {

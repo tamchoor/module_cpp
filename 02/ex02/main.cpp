@@ -12,7 +12,6 @@ int main( void )
 	std::cout << a++ << std::endl;
 	std::cout << a << std::endl;
 	std::cout << b << std::endl;
-	
 
 	std::cout << "a = " << a << std::endl;
 	std::cout << "b = " << b << std::endl;
@@ -24,7 +23,6 @@ int main( void )
 		std::cout << "c == c" << std::endl;
 	else 
 		std::cout << "c != c" << std::endl;
-
 	if (c == b)
 		std::cout << "c == b" << std::endl;
 	else 
@@ -39,9 +37,19 @@ int main( void )
 	else 
 		std::cout << "c < b" << std::endl;
 
+	if (c < b)
+		std::cout << "c < b" << std::endl;
+	else 
+		std::cout << "c > b" << std::endl;
+	if (c <= c)
+		std::cout << "c <= c" << std::endl;
+	else 
+		std::cout << "c > c" << std::endl;
 	std::cout << --a << std::endl;
 	std::cout << a-- << std::endl;
 	std::cout << c*b << std::endl;
 	std::cout << c/c << std::endl;
+	std::cout << c+b << std::endl;
+	std::cout << c-c << std::endl;
 	return 0; 
 }
