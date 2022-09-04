@@ -27,6 +27,7 @@ class Convert
 		double castToDouble();
 
 	private :
+		Convert();
 		char _charForm;
 		int _intForm;
 		float _floatForm;

@@ -4,7 +4,6 @@
 Convert::Convert(std::string nbr) : _nbr(nbr), _Type(UnknownType)
 {
 	_Type = AnaliseType();
-	// std::cout << "Type = " << _Type << std::endl;
 	setDefaultType();
 }
 
