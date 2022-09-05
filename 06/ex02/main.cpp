@@ -17,10 +17,13 @@ Base * generate(void)
 	switch (x)
 	{
 		case 0:
+			std::cout << "Generate A\n";
 			return new A;
 		case 1:
+			std::cout << "Generate B\n";
 			return new B;
 		case 2:
+			std::cout << "Generate C\n";
 			return new C;
 	}
 	return NULL;

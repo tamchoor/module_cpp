@@ -55,4 +55,8 @@ void ShrubberyCreationForm::executeConcreteForm()  const
 					"__________________ ¶¶¶¶¶¶¶¶¶ \n" ;
 		outfd.close();
 	}
+	else
+	{
+		throw std::logic_error("ShrubberyCreationForm :is Not Open File");
+	}
 }

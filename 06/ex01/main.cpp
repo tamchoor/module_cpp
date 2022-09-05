@@ -30,16 +30,25 @@ int main()
 	data.ch = 'M';
 	data.bl = true;
 
+	std::cout << " data address = " << &data << std::endl;
 	std::cout << data.nbr << std::endl;
 	std::cout << data.fl << std::endl;
 	std::cout << data.ch << std::endl;
 	std::cout << data.bl << std::endl;
 	std::cout << "-----------------------" << std::endl;
 	raw = serialize(&data);
+	std::cout << " raw address = " << &raw << std::endl;
 	ptr = deserialize(raw);
+
+	std::cout << " ptr address = " << ptr << std::endl;
 	std::cout << ptr->nbr << std::endl;
 	std::cout << ptr->fl << std::endl;
 	std::cout << ptr->ch << std::endl;
 	std::cout << ptr->bl << std::endl;
+
+	std::cout << "-----------new nbr------------" << std::endl;
+	ptr->nbr = 8;
+	std::cout << ptr->nbr << std::endl;
+	std::cout << data.nbr << std::endl;
 	return 0;
 }

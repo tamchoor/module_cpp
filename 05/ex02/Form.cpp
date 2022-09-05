@@ -72,7 +72,6 @@ void Form::execute(Bureaucrat const &executor) const
 	this->executeConcreteForm();
 }
 
-
 std::ostream& operator<<(std::ostream &out, const Form &ref)
 {
 	out << " Form name : " << ref.getName() << "\n Target : " << ref.getTarget() \
@@ -91,4 +90,3 @@ const char* Form::GradeTooLowException::what() const throw()
 {
 	return "Form: Grade too Low";
 }
-
