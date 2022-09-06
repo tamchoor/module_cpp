@@ -12,6 +12,8 @@ Span::Span( const Span & ref )
 
 Span & Span::operator=( const Span & ref)
 {
+	if (this == &ref)
+		return *this;
 	_vec = ref._vec;
 	return *this;
 }
@@ -38,14 +40,7 @@ int		Span::longestSpan()
 {
 	if (_vec.size() <= 1)
 		throw std::logic_error("not enough vals");
-	std::vector<int>::iterator it;
-	int max = 0;
-	for (std::vector<int>::iterator it = _vec.begin(); (it + 1) != _vec.end(); it++)
-	{
-		int nbr = abs(*(it + 1) - *it);
-		if (nbr > max)
-			max = nbr;
-	}
+	int max = *std::max_element(_vec.begin(), _vec.end()) - *std::min_element(_vec.begin(), _vec.end());;
 	return max;
 }
 
@@ -53,8 +48,6 @@ int		Span::shortestSpan()
 {
 	if (_vec.size() <= 1)
 		throw std::logic_error("not enough vals");
-
-	std::vector<int>::iterator it;
 	int min = *std::max_element(_vec.begin(), _vec.end()) - *std::min_element(_vec.begin(), _vec.end());
 	for (std::vector<int>::iterator it = _vec.begin(); (it + 1) != _vec.end(); it++)
 	{
@@ -65,5 +58,19 @@ int		Span::shortestSpan()
 	return min;
 }
 
+std::vector<int> Span::get_vec() const
+{
+	return _vec;
+}
 
+std::ostream & operator<<(std::ostream & out, const Span & s)
+{
+	for (unsigned long i = 0; i < s.get_vec().size(); i++)
+	{
+		if (i != 0)
+			out << ", ";
+		out << s.get_vec()[i];
+	}
+	return out;
+}
 

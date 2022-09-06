@@ -12,7 +12,6 @@ Array<T>::Array(unsigned int n)
 {
 	_size = n;
 	_arr = new T[n];
-
 }
 
 template <typename T>
@@ -25,21 +24,6 @@ Array<T>::Array(const Array & ref)
 		_arr[i] = ref._arr[i];
 	}
 }
-
-// template <typename T>
-// Array<T> & operator=(const Array<T> & ref)
-// {
-// 	if (this == &ref)
-// 		return *this;
-// 	_size = ref._size;
-// 	delete [] _arr;
-// 	_arr = new T[_size];
-// 	for (int i = 0; i < _size; i++)
-// 	{
-// 		_arr[i] = ref._arr[i];
-// 	}
-// 	return *this;
-// }
 
 template <typename T>
 Array<T>::~Array()
@@ -60,4 +44,3 @@ unsigned int Array<T>::size() const
 {
 	return _size;
 }
-

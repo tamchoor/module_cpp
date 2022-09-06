@@ -2,9 +2,7 @@
 #define MUTANTSTACK_H
 
 #include <iostream>
-// #include <string.h>
 #include <stack>
-
 
 template <typename T>
 class MutantStack: public std::stack<T>
@@ -63,5 +61,19 @@ class MutantStack: public std::stack<T>
 			return this->c.crend();
 		};
 };
+
+template <typename T>
+std::ostream & operator<<(std::ostream & out, MutantStack<T> & ms)
+{
+	int i = 0;
+	for (typename MutantStack<T>::iterator it = ms.begin(); it != ms.end(); it++)
+	{
+		if (i != 0)
+			out << ", ";
+		out << *it;
+		i++;
+	}
+	return out;
+}
 
 #endif

@@ -1,30 +1,58 @@
 #include "iter.hpp"
 
+class Awesome
+{
+	public :
 
-// void fillInt(int & val)
-// {
-// 	val = 42;
-// }
+		Awesome() : _n(42){}
+		// Awesome(int n) : _n(n){}
+		// Awesome & operator= (Awesome const & ref_A) {
+		// 	_n = ref_A._n;
+		// 	return *this; }
+		// bool operator== (Awesome const & ref_A) const
+		// {
+		// 	return _n == ref_A._n;
+		// }
+		// bool operator!=(Awesome const & ref_A) const
+		// {
+		// 	return _n != ref_A._n;
+		// }
+		// bool operator>(Awesome const & ref_A) const
+		// {
+		// 	return _n > ref_A._n;
+		// }
+		// bool operator<(Awesome const & ref_A) const
+		// {
+		// 	return _n < ref_A._n;
+		// }
+		// bool operator>=(Awesome const & ref_A) const
+		// {
+		// 	return _n >= ref_A._n;
+		// }
+		// bool operator<=(Awesome const & ref_A) const
+		// {
+		// 	return _n <= ref_A._n;
+		// }
+		int get_n() const 
+		{
+			return _n;
+		}
+	private :
+		int _n;
+};
 
-// void fillChar(char & val)
-// {
-// 	val = 42;
-// }
+std::ostream & operator<< (std::ostream & out, const Awesome & a)
+{
+	out << a.get_n();
+	return out;
+}
 
-// void printInt(int & val)
-// {
-// 	std::cout << val << std::endl;
-// }
 
-// void printChar(char & val)
-// {
-// 	std::cout << val << std::endl;
-// }
 
 template <typename T>
 void fillVal(T & val)
 {
-	val = 42;
+	val = 97;
 }
 
 template <typename T>
@@ -39,17 +67,20 @@ int main( void )
 	int intArr[size];
 	char charArr[size];
 
-	// iter(intArr, size, &fillInt);
-	// iter(intArr, size, &printInt);
-
-	// iter(charArr, size, &fillChar);
-	// iter(charArr, size, &printChar);
 
 	iter(intArr, size, &fillVal);
 	iter(intArr, size, &printVal);
 
 	iter(charArr, size, &fillVal);
 	iter(charArr, size, &printVal);
+
+
+	std::cout << "______Test 2________\n";
+	int tab[] = {0, 1, 2, 3, 4};
+	Awesome tab2[5];
+	size = 5;
+	iter(tab, size, &printVal);
+	iter(tab2, size, &printVal);
 
 
 	return 0;

@@ -4,6 +4,15 @@
 #define MAX_VAL 7
 int main(int, char**)
 {
+    Array<int> empty;
+    Array<int> notEmpty(6);
+
+    std::cout << notEmpty.size() << std::endl;
+    std::cout << empty.size() << std::endl;
+    notEmpty = empty;
+    std::cout << notEmpty.size() << std::endl;
+
+
     Array<int> numbers(MAX_VAL);
     int* mirror = new int[MAX_VAL];
     srand(time(NULL));
